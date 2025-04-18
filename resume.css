@@ -1,16 +1,6 @@
-html, body {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	background-color: #0a192f;
-	height: 100%;
-	overflow-x: hidden;
-}
-
-
 section {
 	padding: 100px 200px;
-	background-color: #0a192f;
+	background-color: #040e1d;
 	color: #ccd6f6;
 	font-family: 'Poppins', sans-serif;
 	text-align: center;

@@ -7,6 +7,7 @@
 
 html{
   scroll-behavior: smooth;
+  background-color: #000000;
 }
 
 *{
@@ -52,7 +53,6 @@ nav{
     z-index: 999;
     position: fixed;
     transition: top 0.5s;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -151,7 +151,7 @@ a.active,a:hover{
       position: fixed;
       width: 100%;
       height: 100vh;
-      background: #0a192f;
+      background: #040e1d;
       top: 80px;
       left: -100%;
       text-align: center;

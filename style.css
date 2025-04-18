@@ -4,7 +4,7 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: #0a192f;
+  background-color: #040e1d;
   background-image: url("");
   background-repeat: no-repeat;
   background-size: cover;
@@ -130,7 +130,7 @@ section{
 /*About Me Section*/
 
 .about{
-  background-color: #0a192f;
+  background-color: #040e1d;
   min-height: 110vh;
   color: #a8b2d1;
 }
