@@ -1,0 +1,237 @@
+/* new-projects.css */
+
+#new-projects {
+    background-color: #040e1d; 
+    padding: 60px 20px; 
+    color: #a8b2d1; 
+}
+
+/* Section Title Styling */
+#new-projects .title {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#new-projects .section-title {
+    position: relative;
+    color: #64ffda; 
+    font-size: 2.2em;
+    font-weight: 800;
+    margin-bottom: 150px;
+    text-align: center; 
+}
+
+#new-projects .section-title:before {
+    content: '';
+    position: absolute;
+    top: 56px;
+    left: 50%;
+    width: 140px;
+    height: 3px;
+    background: #64ffda; 
+    transform: translateX(-50%);
+}
+
+/* Projects Grid */
+.projects-grid {
+    display: flex;
+    flex-direction: column; 
+    gap: 100px; 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 0 15px; 
+}
+
+/* Individual Project Item */
+.project-item {
+    display: flex;
+    align-items: center;
+    gap: 50px; /* Space between image and text */
+    position: relative; /* For z-index to work */
+}
+
+/* Alternating Layout */
+.project-item.reverse {
+    flex-direction: row-reverse; /* Image on right, text on left */
+}
+
+/* Image Wrapper */
+.project-image-wrapper {
+    flex: 1;
+    max-width: 60%; /* Adjust as needed */
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative; /* For the overlay and hover effects */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+.project-image-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: filter 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+/* Image Hover Effects */
+.project-image-wrapper:hover img {
+    transform: scale(1.02); /* Slight zoom effect */
+}
+
+/* Project Details */
+.project-details {
+    flex: 1;
+    z-index: 2; 
+    background-color: #0a192f; 
+    padding: 25px;
+    border-radius: 4px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.4);
+    position: relative; 
+    text-align: center; 
+}
+
+.project-item:not(.reverse) .project-details {
+    margin-left: -100px; /* Overlap with the image on left */
+}
+
+.project-item.reverse .project-details {
+    margin-right: -100px; /* Overlap with the image on right */
+}
+
+/* Project Text Styling */
+.project-type {
+    color: #64ffda; 
+    font-size: 0.85em;
+    font-family: 'Roboto Mono', monospace; 
+    margin-bottom: 10px;
+    display: block;
+}
+
+.project-title-new {
+    color: #ccd6f6; 
+    font-size: 1.8em;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.project-description {
+    color: #a8b2d1; 
+    font-size: 1em;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* Project Tags */
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+    justify-content: center; /* Center tags for all items */
+}
+
+.project-tags span {
+    background-color: #112240; 
+    color: #64ffda; 
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8em;
+    font-family: 'Roboto Mono', monospace;
+}
+
+/* Project Links */
+.project-links {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.project-links a {
+    color: #a8b2d1; 
+    font-size: 24px;
+    transition: color 0.3s ease;
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+}
+
+.project-links a:hover {
+    color: #64ffda; 
+}
+
+/* Responsiveness */
+@media (max-width: 1040px) {
+    #new-projects {
+        padding: 80px 15px; 
+    }
+
+    .projects-grid {
+        gap: 60px;
+    }
+
+    .project-item {
+        flex-direction: column; 
+        gap: 30px;
+    }
+
+    .project-item.reverse {
+        flex-direction: column; 
+    }
+
+    .project-image-wrapper {
+        max-width: 100%; 
+        margin: 0; 
+    }
+
+    .project-details {
+        margin-left: 0 !important; 
+        margin-right: 0 !important;
+        width: 100%; 
+        padding: 20px; 
+    }
+
+    .project-tags,
+    .project-links {
+        justify-content: center;
+    }
+
+    .project-title-new {
+        font-size: 1.5em;
+    }
+
+    .project-description {
+        font-size: 0.95em;
+    }
+}
+
+@media (max-width: 768px) {
+    #new-projects .section-title {
+        font-size: 1.8em;
+    }
+}
+
+@media (max-width: 480px) {
+    #new-projects .section-title {
+        font-size: 1.5em;
+        margin-bottom: 40px;
+    }
+
+    #new-projects .section-title:before {
+        top: 48px;
+        width: 100px;
+    }
+
+    .project-details {
+        padding: 15px;
+    }
+
+    .project-title-new {
+        font-size: 1.3em;
+    }
+
+    .project-description {
+        font-size: 0.9em;
+    }
+}
