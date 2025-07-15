@@ -49,22 +49,22 @@
 .project-item {
     display: flex;
     align-items: center;
-    gap: 50px; /* Space between image and text */
-    position: relative; /* For z-index to work */
+    gap: 50px; 
+    position: relative; 
 }
 
 /* Alternating Layout */
 .project-item.reverse {
-    flex-direction: row-reverse; /* Image on right, text on left */
+    flex-direction: row-reverse; 
 }
 
 /* Image Wrapper */
 .project-image-wrapper {
     flex: 1;
-    max-width: 60%; /* Adjust as needed */
+    max-width: 60%; 
     border-radius: 4px;
     overflow: hidden;
-    position: relative; /* For the overlay and hover effects */
+    position: relative; 
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.4);
 }
 
@@ -72,12 +72,27 @@
     width: 100%;
     height: auto;
     display: block;
-    transition: filter 0.3s ease, transform 0.3s ease; /* Smooth transition */
+    filter: grayscale(100%) brightness(50%);
+    transition: filter 0.3s ease, transform 0.3s ease; 
+}
+
+/* Image Overlay */
+.project-image-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(10, 25, 47, 0.9), rgba(20, 50, 80, 0.3));
+    transition: opacity 0.3s ease; 
+    pointer-events: none; 
 }
 
 /* Image Hover Effects */
 .project-image-wrapper:hover img {
-    transform: scale(1.02); /* Slight zoom effect */
+    filter: grayscale(0%) brightness(100%); 
+    transform: scale(1.04); 
 }
 
 /* Project Details */
