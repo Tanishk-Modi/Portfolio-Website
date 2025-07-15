@@ -2,7 +2,7 @@
 
 #new-projects {
     background-color: #040e1d; 
-    padding: 60px 20px; 
+    padding: 30px 20px 120px 20px; /* Reduced top padding, increased bottom padding */
     color: #a8b2d1; 
 }
 
@@ -176,10 +176,16 @@
     color: #64ffda; 
 }
 
+/* External link icon styling */
+.project-links svg {
+    width: 24px;
+    height: 24px;
+}
+
 /* Responsiveness */
 @media (max-width: 1040px) {
     #new-projects {
-        padding: 80px 15px; 
+        padding: 50px 20px 100px 20px !important; /* Adjusted padding for mobile */
     }
 
     .projects-grid {
